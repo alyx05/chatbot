@@ -1,0 +1,88 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["hi", "hey", "hello", "start", "good morning", "yo"],
+            "responses": [
+                "Hello! Welcome to McDonald's. Would you like to place an order today?"
+            ]
+        },
+        {
+            "tag": "order_intent",
+            "patterns": ["yes", "i am ready to order", "yeah", "yup", "sure", "lets go"],
+            "responses": [
+                "Awesome! What main item can I get you today? We have the Big Mac, Quarter Pounder, McCrispy, and McNuggets."
+            ]
+        },
+        {
+            "tag": "burger_selection",
+            "patterns": ["big mac", "burger", "mcchicken", "quarter pounder", "mccrispy", "mcnuggets", "mac"],
+            "responses": [
+                "Excellent choice! I've added the {item} to your ticket. Would you like to make that item a value meal combo, or just keep it standalone?"
+            ]
+        },
+        {
+            "tag": "meal_upgrade",
+            "patterns": ["a meal", "make it a meal", "combo", "upgrade it"],
+            "responses": [
+                "Sure thing! Which size combo would you prefer for your {item}? Small, medium, or large?"
+            ]
+        },
+        {
+            "tag": "size_selection",
+            "patterns": ["small", "medium", "large", "tiny", "little", "big", "max", "supersize"],
+            "responses": [
+                "Got it, a {size} combo! What side would you like with that? You can choose World Famous Fries, Apple Slices, or a Side Salad."
+            ]
+        },
+        {
+            "tag": "side_selection",
+            "patterns": ["fries", "apple slices", "salad", "french fries", "chips", "side salad"],
+            "responses": [
+                "Perfect, {size} {side} it is! Now let's pick a drink. We have fountain sodas (Coke, Sprite, Fanta) or premium choices like an Iced Coffee or Milkshake."
+            ]
+        },
+        {
+            "tag": "drink_selection",
+            "patterns": ["sprite", "coke", "fanta", "cola", "soda", "milkshake", "coffee"],
+            "responses": [
+                "Added to your order! So far I have a quantity of {quantity} {size} {item} meal with {side}. Would you like to add another item, or is that everything for today?"
+            ]
+        },
+        {
+            "tag": "order_complete",
+            "patterns": ["thats all", "nothing else", "im done", "thats it", "stop"],
+            "responses": [
+                "Excellent, {name}. Will you be paying via cash at the pickup window, or using a mobile card payment right now?"
+            ]
+        },
+        {
+            "tag": "payment_selection",
+            "patterns": ["cash", "card", "credit", "debit", "apple pay", "visa"],
+            "responses": [
+                "Perfect, your transaction is processed. Your order is now complete. Is there anything else I can help you with today?"
+            ]
+        },
+        {
+            "tag": "final_denial",
+            "patterns": ["no", "nope", "nah", "nothing"],
+            "responses": [
+                "Awesome. Enjoy your meal, {name}, and have a great day! Remember to type 'exit' or 'quit' to close your drive-thru receipt."
+            ]
+        }
+    ],
+    "synonyms": {
+        "yes": ["yeah", "yup", "sure", "correct", "want to order", "lets go"],
+        "hello": ["howdy", "yo", "sup", "good morning"],
+        "big mac": ["mac", "bigmac", "number one", "double cheeseburger"],
+        "mcnuggets": ["nuggets", "chix nuggets", "chicken pieces"],
+        "large": ["big", "huge", "max", "supersize"],
+        "small": ["tiny", "little"],
+        "fries": ["fry", "french fries", "chips", "potato fries"],
+        "apple slices": ["apple", "apple slice", "apples"],
+        "salad": ["side salad"],
+        "no": ["nope", "nah", "stop", "nothing", "thats it"],
+        "coke": ["cola", "cocacola", "coca-cola", "diet coke"],
+        "card": ["credit", "debit", "apple pay", "visa", "mastercard"]
+    }
+}
