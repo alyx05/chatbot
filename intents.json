@@ -1,0 +1,79 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["hi", "hey", "hello", "start", "good morning", "yo"],
+            "responses": [
+                "Welcome to Starbucks! Can I get a name for your order today?"
+            ]
+        },
+        {
+            "tag": "name_response",
+            "patterns": ["name is", "i am", "call me"],
+            "responses": [
+                "Hi {name}! What handcrafted beverage can I get started for you today? We have Cold Brew, Caramel Macchiatos, Caffè Lattes, and Frappuccinos."
+            ]
+        },
+        {
+            "tag": "item_selection",
+            "patterns": ["caramel macchiato", "caffe latte", "pink drink", "frappuccino", "cold brew", "latte"],
+            "responses": [
+                "Excellent choice! What size would you like for your {item}? Tall, Grande, or Venti?"
+            ]
+        },
+        {
+            "tag": "size_selection",
+            "patterns": ["tall", "grande", "venti", "small", "medium", "large"],
+            "responses": [
+                "Got it, a {size} {item}. Would you like to pair a bakery item with that today? We have warm Croissants, Cake Pops, and Muffins."
+            ]
+        },
+        {
+            "tag": "side_selection",
+            "patterns": ["croissant", "cake pop", "muffin", "cookie", "bagel"],
+            "responses": [
+                "Perfect, added the {side} to your ticket. Will you be paying via cash or card today?"
+            ]
+        },
+        {
+            "tag": "payment_selection",
+            "patterns": ["cash", "card", "credit", "debit", "apple pay"],
+            "responses": [
+                "Perfect, your transaction is processed. Is there anything else I can add for you today?"
+            ]
+        },
+        {
+            "tag": "modify_order",
+            "patterns": ["change my order", "change that", "change it", "actually change", "can i change", "different one", "start over", "wait i want to change", "edit my order", "instead"],
+            "responses": [
+                "No problem, {name}! What would you like to change \u2014 the drink, size, or side? Just tell me the new one and I'll update your ticket."
+            ]
+        },
+        {
+            "tag": "add_more_confirmation",
+            "patterns": ["yes", "yeah", "yup", "sure", "correct", "lets go"],
+            "responses": [
+                "Sure thing, {name}! What else can I add to your ticket? (Feel free to specify another drink or bakery item)"
+            ]
+        },
+        {
+            "tag": "final_denial",
+            "patterns": ["no", "nope", "nah", "nothing", "thats all", "thats it"],
+            "responses": [
+                "Awesome. Your barcode is ready to scan. Enjoy your coffee break, {name}, and have a great day! Remember to type 'exit' or 'quit' to complete your order session."
+            ]
+        }
+    ],
+    "synonyms": {
+        "yes": ["yeah", "yup", "sure", "correct", "want to order", "lets go"],
+        "hello": ["howdy", "yo", "sup", "good morning"],
+        "caramel macchiato": ["macchiato", "caramel coffee", "iced macchiato"],
+        "caffe latte": ["latte", "double shot espresso latte", "hot latte"],
+        "frappuccino": ["frap", "blended coffee", "frappe"],
+        "grande": ["medium", "regular size"],
+        "venti": ["large", "big one"],
+        "tall": ["small", "tiny size"],
+        "croissant": ["butter croissant", "warm bread"],
+        "no": ["nope", "nah", "stop", "nothing", "thats it"]
+    }
+}
